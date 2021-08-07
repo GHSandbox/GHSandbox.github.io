@@ -40,8 +40,19 @@
         var myForm = document.getElementById('my-form-id');
 
         function okClick() {
-            if (document.getElementById("answerRiddle").value == "Schatten" && document.getElementById("answerLetters").value == "Burg") {
-                window.location.replace("solution.html");
+            var ansRid = document.getElementById("answerRiddle");
+            var ansLet = document.getElementById("answerLetters");
+            if (ansRid.value == "Schatten"){ 
+                ansRid.style.borderColor = "rgb(3,168,108)";
+                if (ansLet.value == "Burg"){
+                    window.location.replace("solution.html");
+                }
+                else {
+                    ansLet.style.borderColor = "red";
+                }
+            } 
+            else {
+                ansRid.style.borderColor = "red";
             }
         }
     </script>
