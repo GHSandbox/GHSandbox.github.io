@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Mami Geburi</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Patrick Gemperle">
+        <!--Stylesheets-->
+        <link rel="stylesheet" href="custom.css">
+        <!--Metadata Tag for responsiveness-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <!--For correct IExplorer rendering-->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+    </head>
+    <body>
+        <div id="wrapper" class="wrapper">
+            <div class="content">
+                <form id="riddleForm">
+                    <h1>1. Wo<span style="color: white">r</span>t</h1>
+                    <p>Ich habe nur eine Farbe, aber nicht nur eine Grösse.</br>
+                       Festgemacht am <span style="color: rgb(3,168,108)">B</span>oden, dennoch fliege ich leicht.</br>
+                       Da bei Sonne, verschwunden bei Regen.</br>
+                       Tu niemandem weh, fühle selbst keinen Schmerz.</br>
+                       </br>
+                       Was bin ich?
+                    </p>
+                    <h1>2. Wort</h1>
+                    <p>Auf dieser Seite sind 4 Buchstaben versteckt.</br>
+                       Finde sie <span style="color: rgb(3,168,108)">u</span>nd setze sie in die richtige Reihenfol<span style="color: rgb(3,168,108)">g</span>e.
+                    </p>
+                    <input id="answerRiddle" class="textInput" type="text" placeholder="Antwort Rätsel"/> - <input id="answerLetters" class="textInput" type="text" placeholder="Versteckte Buchstaben"/>
+                    </br>
+                    <div class="buttonHolder">
+                        <input class="button" type="button" value="OK" onclick="okClick()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        var myForm = document.getElementById('my-form-id');
+
+        function okClick() {
+            if (document.getElementById("answerRiddle").value == "Schatten" && document.getElementById("answerLetters").value == "Burg") {
+                window.location.replace("solution.html");
+            }
+        }
+    </script>
+</html>
